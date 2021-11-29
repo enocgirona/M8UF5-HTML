@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari d'enviament</title>
+    <script type="text/javascript">
+        function validar(){
+        var psswd=document.getElementById("psswd").value;
+        var confpsswd=document.getElementById("confpsswd").value;
+        if(psswd==confpsswd){
+        return true;
+        }
+        else{
+        alert("No coincideix");
+        return false;
+        }
+        }
+        </script>
+</head>
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    <form action="" method="get" >
+    <table style="background-color: #EFEFEF;">
+        <tr style="background-color: #306090; color: white;">
+            <td colspan="3" width="800"><h2>Enviar missatge <img align="right" src="img/gb_reload_s.gif" alt=""></h2></td>
+            
+        </tr>
+        <tr>
+            <td colspan="3"><p><strong>Nom:</strong> <input type="text" name="nom" required></p></td>
+        </tr>
+        <tr>
+            <td colspan="3"><p><strong>Email:</strong> <input type="email" name="email" required></p></td>
+        </tr>
+        <tr>
+            <td colspan="3"><p><strong>Arxiu:</strong><input type="file" name="arxiu" required></p></td>
+        </tr>
+        <tr>
+            <td colspan="3"><p><strong>Imatge:</strong><input type="file" name="imatge" required></p></td>
+        </tr>
+        <tr align="center">
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><p>El tamany de l'arxiu i la imatge no pot accedir els 4 KBytes</p></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3"><p><strong>Usuari:</strong> <input type="text" name="Usuari" maxlength="8" required></p></td>
+        </tr>
+        <tr>
+            <td colspan="3"><p><strong>Contrasenya</strong><input type="password" name="psswd" id="passwd" required> </p></td>
+        </tr>
+        <tr>
+            <td colspan="3"><form action="" onsubmit="return validar();"></form><p><strong>Repetició de la contrasenya</strong><input type="password" name="reppasswd" id="confpsswd" required> </p></td>
+        </tr>
+        <tr>
+            <td colspan="3"><p><strong>Quins jocs t'interessen?</strong></p>
+                
+                <input type="checkbox" id="cb1" name="Joc" value="Valorant"><label for="cb1"></label>Valorant<br>
+                <input type="checkbox" id="cb2" name="Joc" value="Fifa 22"><label for="cb2"></label>Fifa 22<br>
+                <input type="checkbox" id="cb3" name="Joc" value="God of War"><label for="cb3"></label>God of War<br>
+                <input type="checkbox" id="cb4" name="Joc" value="Assasins Creed"><label for="cb4"></label>Assasins Creed<br>
+            </td>
+        </tr>
+        <tr align="center">
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><strong><p>Requereixo resposta:<input type="radio" name="resposta" value="Sí">Sí
+                <input type="radio" name="resposta" value="No">No</p></strong></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td align="center"><strong>Missatge</strong></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr align="center">
+            <td>&nbsp;</td>
+            <td><textarea name="Missatge" id="Missatge" cols="45" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td align="center"><p><a href="mailto:enoc.girona@inslapineda.cat"><input type="submit" value="Enviar" ></a><button>Borrar</button></p>
+            </td>
+        </tr>
+        
+    </table>
+    </form>
+</body>
+</html>
